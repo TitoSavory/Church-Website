@@ -1,0 +1,310 @@
+
+/**
+ * Main Stylesheet
+ * 
+ * Sections:
+ * 1. Root Variables
+ * 2. Base Styles
+ * 3. Holiday Decorations
+ * 4. Animations
+ * 5. Buttons
+ * 6. Cards
+ * 7. Countdown
+ * 8. Accessibility
+ * 9. Holiday Toggle
+ */
+
+/* 1. Root Variables */
+:root {
+--primary: #B31942; /* Festive Red */
+  --secondary: #0A5C36; /* Forest Green */
+  --accent: #D4AF37; /* Gold */
+  --light: #FFFDFA; /* Winter White */
+  --cool: #E1F5FE; /* Icy Blue */
+  --dark: #1A1A1A;
+  
+  /* Holiday Colors */
+  --holiday-red: #C41E3A;
+  --holiday-green: #355E3B;
+  --holiday-gold: #FFD700;
+  --holiday-silver: #C0C0C0;
+  --holiday-blue: #5D8AA8;
+  
+  /* New Holiday Theme */
+  --holiday-primary: #B31942;
+  --holiday-secondary: #0A5C36;
+  --holiday-accent: #D4AF37;
+  --holiday-light: #FFFDFA;
+  --holiday-dark: #1A1A1A;
+--header-height: 80px;
+  --transition: all 0.3s ease;
+  
+  /* Holiday mode variables */
+  --holiday-snow: none;
+  --holiday-lights: none;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--dark);
+  background-color: var(--light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: 700;
+  color: var(--primary);
+}
+/* Holiday Decorations */
+.holiday-decoration {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 40"><circle cx="50" cy="20" r="8" fill="%23D4AF37"/><circle cx="150" cy="20" r="8" fill="%23C41E3A"/><circle cx="250" cy="20" r="8" fill="%23355E3B"/><circle cx="350" cy="20" r="8" fill="%23D4AF37"/><circle cx="450" cy="20" r="8" fill="%23C41E3A"/><circle cx="550" cy="20" r="8" fill="%23355E3B"/><circle cx="650" cy="20" r="8" fill="%23D4AF37"/><circle cx="750" cy="20" r="8" fill="%23C41E3A"/><circle cx="850" cy="20" r="8" fill="%23355E3B"/><circle cx="950" cy="20" r="8" fill="%23D4AF37"/></svg>');
+  background-size: 300px 40px;
+  background-repeat: repeat-x;
+  z-index: 10;
+  opacity: 0.8;
+  animation: twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+/* Snow Effect */
+.snow {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: none;
+}
+
+.snowflake {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .snowflake {
+    animation: none;
+  }
+  .holiday-decoration {
+    animation: none;
+  }
+}
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease forwards;
+}
+
+/* Buttons */
+.btn-holiday {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.btn-holiday:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(183, 28, 28, 0.2);
+}
+
+.btn-holiday::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.btn-holiday:hover::after {
+  opacity: 0.6;
+  transform: rotate(15deg);
+}
+
+/* Cards */
+.holiday-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: var(--transition);
+  position: relative;
+}
+
+.holiday-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.holiday-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .theme-toggle {
+  background: var(--holiday-gold);
+}
+/* Accessibility */
+@media (prefers-reduced-motion) {
+  .fade-in, .slide-up {
+    animation: none !important;
+  }
+}
+/* Dark Mode Variables */
+[data-theme="dark"],
+.dark-theme-active {
+--primary: #f3f4f6;
+  --secondary: #d1d5db;
+  --accent: #f59e0b;
+  --light: #1f2937;
+  --dark: #f9fafb;
+  --cool: #374151;
+  --holiday-red: #ef4444;
+  --holiday-green: #10b981;
+  --holiday-gold: #f59e0b;
+  
+  background-color: #111827;
+  color: #f3f4f6;
+}
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+.dark-theme-active h1,
+.dark-theme-active h2,
+.dark-theme-active h3,
+.dark-theme-active h4,
+.dark-theme-active h5,
+.dark-theme-active h6 {
+color: var(--accent);
+}
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .bg-yellow-50,
+.dark-theme-active .bg-white,
+.dark-theme-active .bg-yellow-50 {
+background-color: #1f2937 !important;
+  color: #f3f4f6;
+}
+[data-theme="dark"] .bg-gray-100,
+[data-theme="dark"] .bg-gray-50,
+.dark-theme-active .bg-gray-100,
+.dark-theme-active .bg-gray-50 {
+background-color: #1f2937 !important;
+}
+[data-theme="dark"] .text-gray-600,
+[data-theme="dark"] .text-gray-800,
+[data-theme="dark"] .border-yellow-600,
+.dark-theme-active .text-gray-600,
+.dark-theme-active .text-gray-800,
+.dark-theme-active .border-yellow-600 {
+color: #d1d5db !important;
+  border-color: #f59e0b !important;
+}
+[data-theme="dark"] .border-gray-200,
+[data-theme="dark"] .border-gray-300,
+.dark-theme-active .border-gray-200,
+.dark-theme-active .border-gray-300 {
+border-color: #374151 !important;
+}
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+.dark-theme-active input,
+.dark-theme-active textarea {
+background-color: #1f2937 !important;
+  color: #f3f4f6 !important;
+  border-color: #374151 !important;
+}
+[data-theme="dark"] .shadow-md,
+.dark-theme-active .shadow-md {
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3) !important;
+}
+[data-theme="dark"] .shadow-lg,
+.dark-theme-active .shadow-lg {
+box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+.theme-toggle {
+  transition: all 0.3s ease;
+}

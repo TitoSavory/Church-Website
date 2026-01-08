@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<!-- 
+    Contact Page 
+    Sections:
+    1. Navigation
+    2. Hero Section
+    3. Contact Form with Validation
+    4. Success Message
+    5. Footer
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Queens Village Church of the Nazarene</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com">
+        // Dark mode toggle
+        const themeToggle = document.createElement('button');
+        themeToggle.className = 'fixed bottom-4 right-4 bg-yellow-600 hover:bg-yellow-700 text-white p-3 rounded-full shadow-lg z-50';
+        themeToggle.innerHTML = '<i data-feather="moon"></i>';
+        document.body.appendChild(themeToggle);
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                themeToggle.innerHTML = '<i data-feather="moon"></i>';
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                themeToggle.innerHTML = '<i data-feather="sun"></i>';
+                localStorage.setItem('theme', 'dark');
+            }
+            feather.replace();
+        });
+
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark' || 
+            (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeToggle.innerHTML = '<i data-feather="sun"></i>';
+        }
+        
+        feather.replace();
+        feather.replace();
+    </script>
+<script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+        
+        .contact-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://static.photos/office/1200x630/15');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .nav-link:hover {
+            color: #f59e0b;
+        }
+        
+        .input-focus:focus {
+            border-color: #f59e0b;
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
+        }
+    </style>
+</head>
+<body class="font-roboto bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                   
+                    <div class="flex items-center">
+                        <a href="index.html" class="font-playfair text-2xl font-bold text-gray-800 hover:text-yellow-600">QV Nazarene</a>
+                        <img src="https://huggingface.co/spaces/THarvey/divine-path-nazarene-hub/resolve/main/images/nazlogo.png" alt="Nazarene Logo" class="h-8 w-auto ml-4">
+                    </div>
+                </div>
+<div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">Home</a>
+                    <a href="about.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">About Us</a>
+                    <a href="pastor.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">Our Pastor</a>
+                    <a href="events.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">Events</a>
+<a href="contact.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <i data-feather="menu" class="w-6 h-6 text-gray-800"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="contact-bg text-white py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="font-playfair text-5xl md:text-6xl font-bold mb-6">Contact Us</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">We'd love to hear from you!</p>
+        </div>
+    </section>
+    <!-- Contact Form -->
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="max-w-2xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+                    <p class="text-xl text-gray-600">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                </div>
+                <form id="contactForm" class="space-y-6" novalidate>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Full Name *</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition">
+                            <div id="name-error" class="text-red-500 text-sm mt-1 hidden">Please enter your name</div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address *</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition">
+                            <div id="email-error" class="text-red-500 text-sm mt-1 hidden">Please enter a valid email address</div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-gray-700 font-medium mb-2">Subject *</label>
+                        <input type="text" id="subject" name="subject" required 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition">
+                        <div id="subject-error" class="text-red-500 text-sm mt-1 hidden">Please enter a subject</div>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Your Message *</label>
+                        <textarea id="message" name="message" rows="6" required minlength="20"
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition"></textarea>
+                        <div id="message-error" class="text-red-500 text-sm mt-1 hidden">Message must be at least 20 characters</div>
+                    </div>
+                    <div class="pt-2">
+                        <button type="submit" class="btn btn-primary w-full py-4 text-lg hover:bg-yellow-700 transition-colors">
+                            Send Message <i data-feather="send" class="w-5 h-5 ml-2"></i>
+                        </button>
+                    </div>
+                    <div id="formError" class="text-red-500 text-sm mt-4 hidden"></div>
+</form>
+                <div id="formSuccess" class="hidden mt-8 p-8 bg-green-50 border border-green-200 rounded-lg text-center">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                            <i data-feather="check-circle" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-green-800 mb-2">Thank You!</h3>
+                        <p class="text-lg text-green-600 mb-4">Your message has been sent successfully to our team.</p>
+                        <p class="text-gray-600">We appreciate you reaching out and will respond as soon as possible. Typically within 1-2 business days.</p>
+                        <div class="mt-6 flex items-center text-sm text-green-600">
+                            <i data-feather="mail" class="w-4 h-4 mr-2"></i>
+                            <span>We've received your message and will respond soon</span>
+                        </div>
+</div>
+                </div>
+</div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-playfair text-xl font-bold mb-4">QV Nazarene</h3>
+                    <p class="text-gray-400">186-06 Hillside Ave</p>
+                    <p class="text-gray-400">Jamaica, NY 11432</p>
+                    
+                    <div class="mt-4">
+                        <a href="/documents/annual-report.pdf" class="text-yellow-500 hover:underline text-sm">Annual Report {COMING SOON}</a>
+                    </div>
+                </div>
+<div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-yellow-500 transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-yellow-500 transition">About Us</a></li>
+                        <li><a href="pastor.html" class="text-gray-400 hover:text-yellow-500 transition">Our Pastor</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-yellow-500 transition">Events</a></li>
+                    </ul>
+                </div>
+               
+</div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Queens Village Church of the Nazarene. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+<script>
+        feather.replace();
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const subjectInput = document.getElementById('subject');
+            const messageInput = document.getElementById('message');
+            const nameError = document.getElementById('name-error');
+            const emailError = document.getElementById('email-error');
+            const subjectError = document.getElementById('subject-error');
+            const messageError = document.getElementById('message-error');
+            const formError = document.getElementById('formError');
+            const formSuccess = document.getElementById('formSuccess');
+
+            function validateEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+
+            function validateForm() {
+                let isValid = true;
+
+                // Validate name
+                if (nameInput.value.trim() === '') {
+                    nameError.classList.remove('hidden');
+                    isValid = false;
+                } else {
+                    nameError.classList.add('hidden');
+                }
+
+                // Validate email
+                if (!validateEmail(emailInput.value.trim())) {
+                    emailError.classList.remove('hidden');
+                    isValid = false;
+                } else {
+                    emailError.classList.add('hidden');
+                }
+
+                // Validate subject
+                if (subjectInput.value.trim() === '') {
+                    subjectError.classList.remove('hidden');
+                    isValid = false;
+                } else {
+                    subjectError.classList.add('hidden');
+                }
+
+                // Validate message
+                if (messageInput.value.trim().length < 20) {
+                    messageError.classList.remove('hidden');
+                    isValid = false;
+                } else {
+                    messageError.classList.add('hidden');
+                }
+
+                return isValid;
+            }
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                formError.classList.add('hidden');
+
+                if (!validateForm()) {
+                    formError.textContent = 'Please fix the errors in the form';
+                    formError.classList.remove('hidden');
+                    return;
+                }
+
+                const formData = {
+                    name: nameInput.value.trim(),
+                    email: emailInput.value.trim(),
+                    subject: subjectInput.value.trim(),
+                    message: messageInput.value.trim()
+                };
+                // Send form data via email
+                const mailtoLink = `mailto:savorytito@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
+                window.location.href = mailtoLink;
+                
+                form.reset();
+                formSuccess.classList.remove('hidden');
+                formSuccess.scrollIntoView({ behavior: 'smooth' });
+                feather.replace();
+});
+        });
+</script>
+    <!-- Add this after the form section -->
+    <script>
+        // Initialize form validation
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const name = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const subject = document.getElementById('subject').value.trim();
+                    const message = document.getElementById('message').value.trim();
+
+                    if (!name || !email || !subject || message.length < 20) {
+                        alert('Please fill out all required fields with valid information');
+                        return;
+                    }
+
+                    const mailtoLink = `mailto:savorytito@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+                    window.location.href = mailtoLink;
+                });
+            }
+        });
+</script>
+</body>
+</html>

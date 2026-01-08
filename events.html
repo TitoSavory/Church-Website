@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<!-- 
+    Events Page 
+    Sections:
+    1. Navigation
+    2. Hero Section
+    3. Upcoming Events Cards
+    4. Google Calendar Embed
+    5. Weekly/Holiday Events
+    6. Calendar Instructions
+    7. Footer
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events - Queens Village Church of the Nazarene</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+        
+        .events-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://static.photos/event/1200x630/5');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .nav-link:hover {
+            color: #f59e0b;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .event-date {
+            background-color: #f59e0b;
+        }
+    </style>
+</head>
+<body class="font-roboto bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                   
+                    <div class="flex items-center">
+                        <a href="index.html" class="font-playfair text-2xl font-bold text-gray-800 hover:text-yellow-600">QV Nazarene</a>
+                        <img src="https://huggingface.co/spaces/THarvey/divine-path-nazarene-hub/resolve/main/images/nazlogo.png" alt="Nazarene Logo" class="h-8 w-auto ml-4">
+                    </div>
+                </div>
+<div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">Home</a>
+                    <a href="about.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">About Us</a>
+                    <a href="pastor.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">Our Pastor</a>
+                    <a href="events.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">Events</a>
+                    <a href="contact.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <i data-feather="menu" class="w-6 h-6 text-gray-800"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="events-bg text-white py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="font-playfair text-5xl md:text-6xl font-bold mb-6">Upcoming Events</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Join us for worship, fellowship, and service</p>
+        </div>
+    </section>
+    <!-- Upcoming Events -->
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="text-center mb-16 mx-auto">
+                <span class="inline-block px-4 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-semibold mb-4">Event Calendar</span>
+                <h2 class="text-4xl font-bold mb-4 text-center">Upcoming Events</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto text-center">Join us for worship, fellowship, and service opportunities</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto justify-center">
+<!-- Event 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 flex flex-col w-full">
+<div class="relative">
+                        <img src="http://static.photos/event/640x360/1" alt="Nazarene Youth International" 
+                             class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            TBD
+                        </div>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-2xl font-bold mb-3">Nazarene Youth International</h3>
+                        <div class="flex items-center text-gray-600 mb-3">
+                            <i data-feather="calendar" class="w-5 h-5 mr-2"></i>
+                            <span>TBD</span>
+                        </div>
+                        <div class="flex items-center text-gray-600 mb-4">
+                            <i data-feather="map-pin" class="w-5 h-5 mr-2"></i>
+                            <span>TBD Location</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">A fun-filled week of Bible stories, crafts, music, and games for kids ages 5-12.</p>
+                    </div>
+                   
+                </div>
+                <!-- Event 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md event-card transition duration-300 border border-gray-200 w-full">
+<div class="event-date text-white text-center py-2 px-4">
+                        <p class="font-bold text-lg">TBD</p>
+                    </div>
+                    <img src="http://static.photos/education/640x360/5" alt="Bible Study" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Ladies And Mens Meeting</h3>
+                        <p class="text-gray-600 mb-4"><i data-feather="clock" class="w-4 h-4 inline mr-2"></i> 4:00 PM -6:00 PM</p>
+                        <p class="text-gray-600 mb-4"><i data-feather="map-pin" class="w-4 h-4 inline mr-2"></i> TBD</p>
+                        <p class="text-gray-600 mb-4">New summer Bible study series on the Book of Romans begins.</p>
+                       
+                    </div>
+                </div>
+                <!-- Event 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md event-card transition duration-300 border border-gray-200 w-full">
+<div class="event-date text-white text-center py-2 px-4">
+                        <p class="font-bold text-lg">TBD</p>
+                    </div>
+                    <img src="http://static.photos/holiday/640x360/6" alt="Independence Day" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Camp</h3>
+                        <p class="text-gray-600 mb-4"><i data-feather="clock" class="w-4 h-4 inline mr-2"></i> TBD</p>
+                        <p class="text-gray-600 mb-4"><i data-feather="map-pin" class="w-4 h-4 inline mr-2"></i> TBD</p>
+                        <p class="text-gray-600 mb-4">Food, games, and fireworks as we celebrate our nation's independence.</p>
+                        
+                    </div>
+                </div>
+</div>
+</div>
+    </section>
+    <!-- Google Calendar -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="font-playfair text-3xl text-center font-bold text-gray-800 mb-12">Live Calendar</h2>
+            <div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&showTz=0&mode=MONTH&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5" 
+                        style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+    </section>
+    <!-- Weekly & Holiday Events -->
+    <section class="py-20 bg-gray-100">
+<div class="container mx-auto px-6">
+            <h2 class="font-playfair text-3xl text-center font-bold text-gray-800 mb-12">Weekly & Holiday Events</h2>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+<div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Sunday Services</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i data-feather="sun" class="w-5 h-5 text-yellow-600 mr-3 mt-1"></i>
+                            <div>
+                                <p class="font-medium text-gray-800">Morning Worship</p>
+                                <p class="text-gray-600">10:30 AM </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-feather="book-open" class="w-5 h-5 text-yellow-600 mr-3 mt-1"></i>
+                            <div>
+                                <p class="font-medium text-gray-800">Sunday School</p>
+                                <p class="text-gray-600">11:30 AM </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Midweek Gatherings</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i data-feather="moon" class="w-5 h-5 text-yellow-600 mr-3 mt-1"></i>
+                            <div>
+                                <p class="font-medium text-gray-800">Bible Study</p>
+                                <p class="text-gray-600">Wednesday 8:00 PM EST - Via Zoom</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-feather="users" class="w-5 h-5 text-yellow-600 mr-3 mt-1"></i>
+                            <div>
+                                <p class="font-medium text-gray-800">Ladies / Mens Meeting</p>
+                                <p class="text-gray-600">TBD 4:00 PM EST- TBD</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Calendar Instructions -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                        <i data-feather="info" class="w-8 h-8 text-yellow-600"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Using Our Calendar</h3>
+                        <div class="text-gray-600 space-y-2">
+                            <p>Our live calendar shows all upcoming church events, services, and meetings.</p>
+                            <p><strong>To add events to your personal calendar:</strong></p>
+                            <ol class="list-decimal pl-5 space-y-1">
+                                <li>Click the "+ Google Calendar" button in the bottom right corner of the calendar</li>
+                                <li>Sign in to your Google account if prompted</li>
+                                <li>Our events will now appear in your personal calendar</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-playfair text-xl font-bold mb-4">QV Nazarene</h3>
+                    <p class="text-gray-400">186-06 Hillside Ave</p>
+                    <p class="text-gray-400">Jamaica, NY 11432</p>
+                    
+                    <div class="mt-4">
+                        <a href="/documents/annual-report.pdf" class="text-yellow-500 hover:underline text-sm">Annual Report {COMING SOON}</a>
+                    </div>
+                </div>
+<div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-yellow-500 transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-yellow-500 transition">About Us</a></li>
+                        <li><a href="pastor.html" class="text-gray-400 hover:text-yellow-500 transition">Our Pastor</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-yellow-500 transition">Events</a></li>
+                    </ul>
+                </div>
+               
+</div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Queens Village Church of the Nazarene. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+<script>
+        feather.replace();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

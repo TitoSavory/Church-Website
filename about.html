@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<!-- 
+    About Us Page 
+    Sections:
+    1. Navigation
+    2. Hero Section
+    3. Church History Timeline
+    4. Beliefs Grid
+    5. Photo Gallery
+    6. Footer
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our History - Queens Village Church of the Nazarene</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+        
+        .history-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://static.photos/vintage/1200x630/18');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .nav-link:hover {
+            color: #f59e0b;
+        }
+        
+        .history-item::before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #f59e0b;
+        }
+    </style>
+</head>
+<body class="font-roboto bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center">
+                        <a href="index.html" class="font-playfair text-2xl font-bold text-gray-800 hover:text-yellow-600">QV Nazarene</a>
+                        <img src="https://huggingface.co/spaces/THarvey/divine-path-nazarene-hub/resolve/main/images/nazlogo.png" alt="Nazarene Logo" class="h-8 w-auto">
+                </div>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">Home</a>
+                    <a href="about.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">About Us</a>
+                    <a href="pastor.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">Our Pastor</a>
+                    <a href="events.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">Events</a>
+<a href="contact.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <i data-feather="menu" class="w-6 h-6 text-gray-800"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="history-bg text-white py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="font-playfair text-5xl md:text-6xl font-bold mb-6">Our History</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Faithfully serving Queens Village </p>
+        </div>
+    </section>
+
+    <!-- Church History -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="font-playfair text-3xl text-center font-bold text-gray-800 mb-12">Our Story</h2>
+            
+            <div class="max-w-3xl mx-auto relative pl-10">
+                <div class="absolute left-0 h-full w-0.5 bg-yellow-500"></div>
+                
+                <div class="mb-12 relative">
+                    <div class="history-item">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">1952 - Humble Beginnings</h3>
+                        <p class="text-gray-600">Founded by a small group of Nazarene families meeting in a rented storefront on Jamaica Avenue. Rev. Thomas Wilson served as the first pastor with a congregation of 23 members.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-12 relative">
+                    <div class="history-item">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">1957 - First Building</h3>
+                        <p class="text-gray-600">Purchased and renovated a small house on 222nd Street to serve as both sanctuary and parsonage. The congregation grew to 75 members under Pastor James Carter.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-12 relative">
+                    <div class="history-item">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">1965 - Expansion</h3>
+                        <p class="text-gray-600">Built the current sanctuary to accommodate growing attendance, which had reached 150. Started the church's first Sunday School program and youth ministry.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-12 relative">
+                    <div class="history-item">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">1980 - Community Outreach</h3>
+                        <p class="text-gray-600">Launched the Queens Village Food Pantry, which continues to serve hundreds of families each month. Added Wednesday night Bible study and prayer meetings.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-12 relative">
+                    <div class="history-item">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">1999 - Renovation</h3>
+                        <p class="text-gray-600">Completed major building renovations including updated sanctuary, new classrooms, and fellowship hall. Celebrated with a 300-person anniversary service.</p>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="history-item">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">2015-Present - New Vision</h3>
+                        <p class="text-gray-600">Under Pastor David Johnson's leadership, launched contemporary worship services, small group ministries, and expanded community service programs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beliefs -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="font-playfair text-3xl text-center font-bold text-gray-800 mb-12">Our Beliefs</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <i data-feather="book" class="w-8 h-8 text-yellow-600 mr-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800">The Bible</h3>
+                    </div>
+                    <p class="text-gray-600">We believe the Bible is the inspired Word of God, our authoritative rule for faith and practice.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <i data-feather="heart" class="w-8 h-8 text-yellow-600 mr-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800">Salvation</h3>
+                    </div>
+                    <p class="text-gray-600">We believe in salvation through faith in Jesus Christ, available to all who repent and believe.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <i data-feather="users" class="w-8 h-8 text-yellow-600 mr-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800">The Church</h3>
+                    </div>
+                    <p class="text-gray-600">We believe the Church is the body of Christ, called to worship, fellowship, and make disciples.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <i data-feather="award" class="w-8 h-8 text-yellow-600 mr-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800">Holiness</h3>
+                    </div>
+                    <p class="text-gray-600">We believe in entire sanctification as a work of God's grace subsequent to salvation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-playfair text-xl font-bold mb-4">QV Nazarene</h3>
+                    <p class="text-gray-400">186-06 Hillside Ave</p>
+                    <p class="text-gray-400">Jamaica, NY 11432</p>
+                    
+                    <div class="mt-4">
+                        <a href="/documents/annual-report.pdf" class="text-yellow-500 hover:underline text-sm">Annual Report {COMING SOON}</a>
+                    </div>
+                </div>
+<div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-yellow-500 transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-yellow-500 transition">About Us</a></li>
+                        <li><a href="pastor.html" class="text-gray-400 hover:text-yellow-500 transition">Our Pastor</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-yellow-500 transition">Events</a></li>
+                    </ul>
+                </div>
+               
+</div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Queens Village Church of the Nazarene. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+<script>
+        feather.replace();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

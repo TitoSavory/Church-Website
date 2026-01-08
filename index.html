@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<!-- 
+    Main Homepage 
+    Sections:
+    1. Holiday Header/Decorations
+    2. Hero Section with Countdown
+    3. Welcome Section
+    4. Quick Links Section
+    5. Service Times
+    6. Latest Sermon & Resources
+    7. Zoom Meetings
+    8. Contact Info
+    9. Map Location
+    10. Footer
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queens Village Church of the Nazarene</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</style>
+</head>
+<body class="font-roboto bg-gray-50">
+<!-- Navigation -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="flex items-center">
+                    <a href="index.html" class="font-playfair text-2xl font-bold text-gray-800 hover:text-yellow-600">QV Nazarene</a>
+                    <img src="https://huggingface.co/spaces/THarvey/divine-path-nazarene-hub/resolve/main/images/nazlogo.png" alt="Nazarene Logo" class="h-8 w-auto ml-4">
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">Home</a>
+                <a href="about.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">About Us</a>
+                <a href="pastor.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">Our Pastor</a>
+                <a href="events.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">Events</a>
+                <a href="contact.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <i data-feather="menu" class="w-6 h-6 text-gray-800"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-gradient-to-b from-blue-900 to-purple-900 text-white py-32">
+      <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center opacity-20"></div>
+      <div class="container mx-auto px-6 text-center relative z-10">
+        <h1 class="font-playfair text-5xl md:text-6xl font-bold mb-6 animate-fade-in">Welcome to QV Nazarene</h1>
+        <p class="text-xl mb-8 max-w-2xl mx-auto animate-fade-in animate-delay-100">A Christ-centered community in Queens Village</p>
+        <div class="mb-8">
+          <span class="text-white font-medium">Member of the New York District</span>
+        </div>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#zoom-section" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Join Us Sunday</a>
+                <a href="about.html" class="bg-transparent hover:bg-white hover:text-gray-800 border-2 border-white text-white font-bold py-3 px-6 rounded-lg transition duration-300">Learn More</a>
+                <a href="#map" class="bg-white hover:bg-gray-100 text-gray-800 font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center gap-2">
+                    <i data-feather="map-pin" class="w-4 h-4"></i> Find Us
+                </a>
+            </div>
+</div>
+    </section>
+    <!-- Welcome Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 flex flex-col items-center">
+                    
+                    <img src="https://huggingface.co/spaces/THarvey/divine-path-nazarene-hub/resolve/main/images/nazlogo.png" alt="Nazarene Logo" class="h-30 w-auto">
+                </div>
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pl-10">
+                    <div class="flex items-center mb-6">
+                       
+                        <h2 class="font-playfair text-3xl md:text-4xl font-bold text-gray-800">Welcome to Our Church Family</h2>
+                    </div>
+                    <p class="text-gray-600 mb-6">.</p>
+<p class="text-gray-600 mb-6">Our church is accredited by the New York District Church of the Nazarene and adheres to the <a href="https://resources.nazarene.org/index.php/s/MTEBKjD2DfPbXfr?dir=/&editing=false&openfile=true" class="text-yellow-600 hover:underline">Manual of the Church of the Nazarene</a>, which outlines our articles of faith, government, and doctrine. We joyfully participate in the denomination's mission to "make Christlike disciples in the nations."</p>
+<div class="mb-6 p-4 border-l-4 border-yellow-600 bg-yellow-50 rounded-r-lg">
+                        <h3 class="font-bold text-gray-800 mb-2">Our Mission Statement</h3>
+                        <p class="text-gray-600">"To be a Christ-centered community that loves God completely (Matthew 22:37), loves others unconditionally (Matthew 22:39), and makes disciples faithfully (Matthew 28:19-20)."</p>
+                    <div class="flex flex-wrap gap-4">
+<a href="about.html" class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300">Our Story</a>
+                        <a href="pastor.html" class="inline-block border-2 border-yellow-600 text-yellow-600 hover:bg-yellow-600 hover:text-white font-bold py-2 px-6 rounded-lg transition duration-300">Meet Our Pastor</a>
+                        <a href="events.html" class="inline-block bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-6 rounded-lg transition duration-300">Upcoming Events</a>
+                    </div>
+                </div>
+</div>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <a href="#" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <i data-feather="book-open" class="w-10 h-10 text-yellow-600 mx-auto mb-3"></i>
+                    <h3 class="font-bold text-gray-800">Sermons(Comming soon)</h3>
+                </a>
+                <a href="events.html" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <i data-feather="calendar" class="w-10 h-10 text-yellow-600 mx-auto mb-3"></i>
+                    <h3 class="font-bold text-gray-800">Calendar</h3>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <i data-feather="heart" class="w-10 h-10 text-yellow-600 mx-auto mb-3"></i>
+                    <h3 class="font-bold text-gray-800">Give (Coming soon)</h3>
+                </a>
+                <a href="contact.html" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <i data-feather="mail" class="w-10 h-10 text-yellow-600 mx-auto mb-3"></i>
+                    <h3 class="font-bold text-gray-800">Contact</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Service Times -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="font-playfair text-3xl text-center font-bold text-gray-800 mb-12">Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
+                    <i data-feather="sun" class="w-10 h-10 text-yellow-600 mx-auto mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Sunday Morning</h3>
+                    <p class="text-gray-600 mb-1">10:30 AM EST - Worship Service</p>
+                    <a href="#zoom-section" class="text-yellow-600 hover:text-yellow-700 font-medium">Join Online <i data-feather="arrow-right" class="w-4 h-4 inline"></i></a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
+                    <i data-feather="moon" class="w-10 h-10 text-yellow-600 mx-auto mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Wednesday Night</h3>
+                    <p class="text-gray-600 mb-1">8:00 - 9:00 PM EST - Bible Study</p>
+                    <p class="text-gray-600 mb-4">(via Zoom)</p>
+                    <a href="#zoom-section" class="text-yellow-600 hover:text-yellow-700 font-medium">Join Study <i data-feather="arrow-right" class="w-4 h-4 inline"></i></a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
+                    <i data-feather="users" class="w-10 h-10 text-yellow-600 mx-auto mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Guest Services</h3>
+                    <p class="text-gray-600 mb-4">Coffee</p>
+                    <p class="text-gray-600 mb-4">Tea</p>
+                    <p class="text-gray-600 mb-4">Pastries</p>
+                    <p class="text-gray-600 mb-4">Free Parking</p>
+                    <a href="events.html" 
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <a href="events.html" class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                    View Full Calendar <i data-feather="calendar" class="w-5 h-5 inline ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Latest Sermon & Resources -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-lg overflow-hidden">
+                        <iframe class="w-full h-64 md:h-96" src="https://www.youtube.com/embed/example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-10">
+                    <h2 class="font-playfair text-3xl font-bold text-gray-800 mb-6">Weekly Worship & Resources
+                      
+                      
+                      
+                      {Under Development}
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">The Teachings of Jesus in Matthew-Jan 4th</h3>
+                    <p class="text-gray-600 mb-6">Join Pastor Sase as we explore God's word.</p>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-gray-800 mb-2">Church Resources</h4>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i data-feather="file-text" class="w-4 h-4 mr-2 mt-1 text-yellow-600"></i>
+                            <span>
+                        <a href="https://foundryleader.com/nphweb/media/content/2439/2439857.htm" target="_blank" rel="noopener noreferrer"
+class="hover:underline" target="_blank" rel="noopener noreferrer">Weekly Bulletin</a> - Updated every week</span>
+</li>
+                            <li><a href="https://foundryleader.com/nphweb/media/content/2439/2439857.htm" class="hover:underline" target="_blank" rel="noopener noreferrer">
+</ul>
+</div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300">
+                            Sermon Archive <i data-feather="play" class="w-4 h-4 inline ml-1"></i>
+                        </a>
+                        <a href="https://foundryleader.com/nphweb/media/content/2439/2439857.htm" 
+class="border-2 border-gray-800 hover:bg-gray-100 text-gray-800 font-bold py-2 px-6 rounded-lg transition duration-300"
+                           data-download-notes>
+                            Download Notes <i data-feather="download" class="w-4 h-4 inline ml-1"></i>
+                        </a>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Zoom Meetings -->
+    <div id="zoom-section"></div>
+<section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="font-playfair text-3xl text-center font-bold text-gray-800 mb-12">Join Us On Zoom</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-gray-100 rounded-lg p-8 shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i data-feather="sun" class="w-6 h-6 text-yellow-600 mr-2"></i>
+                        Sunday Service
+                    </h3>
+                    <div class="mb-4">
+                        <p class="font-medium">Meeting ID: 123 456 7890</p>
+                        <p class="text-gray-600">Password: qvnaz2023</p>
+                    </div>
+                    <p class="text-gray-600 mb-4">Every Sunday at 10:30 AM</p>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zoom.us/j/1234567890?pwd=qvnaz2023" 
+                        alt="Sunday Service QR Code" class="w-32 h-32 mx-auto">
+                    <a href="https://zoom.us/j/1234567890?pwd=qvnaz2023" 
+                       class="mt-4 inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">
+                       Join Meeting
+                    </a>
+                </div>
+
+                <div class="bg-gray-100 rounded-lg p-8 shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i data-feather="book-open" class="w-6 h-6 text-yellow-600 mr-2"></i>
+                        Bible Study
+                    </h3>
+                    <div class="mb-4">
+                        <p class="font-medium">Meeting ID: 894 6816 9926 </p>
+                        <p class="text-gray-600">Password: 077309</p>
+                    </div>
+                    <p class="text-gray-600 mb-4">Every Wednesday at 8:00 PM</p>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://us02web.zoom.us/j/89468169926?pwd=S6JIRKZ0HjvorhWotHJOb5azHJYi6X.1" 
+alt="Bible Study QR Code" class="w-32 h-32 mx-auto">
+                    <a href="https://us02web.zoom.us/j/89468169926?pwd=S6JIRKZ0HjvorhWotHJOb5azHJYi6X.1" 
+                       class="mt-4 inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">
+                       Join Meeting
+                    </a>
+</div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Info -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="font-playfair text-3xl text-center font-bold text-gray-800 mb-12">Other Ways to Reach Us</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
+                    <i data-feather="map-pin" class="w-10 h-10 text-yellow-600 mx-auto mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Location</h3>
+                    <p class="text-gray-600 mb-4">186-06 Hillside Ave<br>Jamaica NY 11432</p>
+                    <a href="#map" class="text-yellow-600 hover:text-yellow-700 font-medium">Get Directions <i data-feather="arrow-right" class="w-4 h-4 inline"></i></a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
+                    <i data-feather="phone" class="w-10 h-10 text-yellow-600 mx-auto mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Phone</h3>
+                    <p class="text-gray-600 mb-1">(347) 853-1237</p>
+                    <p class="text-gray-600 mb-4">Monday-Friday, 9AM-5PM</p>
+                    <a href="tel:+17185550199" class="text-yellow-600 hover:text-yellow-700 font-medium">Call Us <i data-feather="phone" class="w-4 h-4 inline"></i></a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
+                    <i data-feather="mail" class="w-10 h-10 text-yellow-600 mx-auto mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Email</h3>
+                    <p class="text-gray-600 mb-1">churchqueensvillage@outlook.com</p>
+                    <p class="text-gray-600 mb-4">General Inquiries</p>
+                    <a href="contact.html" class="text-yellow-600 hover:text-yellow-700 font-medium">Email Us <i data-feather="mail" class="w-4 h-4 inline"></i></a>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <a href="contact.html" class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                    Contact Form <i data-feather="message-square" class="w-5 h-5 inline ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>   
+<!-- Map -->
+    <section id="map" class="py-20 bg-white">
+<div class="container mx-auto px-6">
+            <h2 class="font-playfair text-3xl text-center font-bold text-gray-800 mb-12">Our Location</h2>
+            <div class="rounded-lg overflow-hidden shadow-xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.10657041497!2d-73.76784368459698!3d40.72582227932899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c261f5a5a8d4e9%3A0x6c8e8b8b8b8b8b8b!2s186-06%20Hillside%20Ave%2C%20Jamaica%2C%20NY%2011429!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-playfair text-xl font-bold mb-4">QV Nazarene</h3>
+                    <p class="text-gray-400">186-06 Hillside Ave</p>
+                    <p class="text-gray-400">Jamaica, NY 11432</p>
+                    
+                    <div class="mt-4">
+                        <a href="/documents/annual-report.pdf" class="text-yellow-500 hover:underline text-sm">Annual Report {COMING SOON}</a>
+                    </div>
+                </div>
+<div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-yellow-500 transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-yellow-500 transition">About Us</a></li>
+                        <li><a href="pastor.html" class="text-gray-400 hover:text-yellow-500 transition">Our Pastor</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-yellow-500 transition">Events</a></li>
+                    </ul>
+                </div>
+               
+</div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Queens Village Church of the Nazarene. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<!-- 
+    Pastor Profile Page 
+    Sections:
+    1. Navigation
+    2. Hero Section
+    3. Pastor Profile with Photo
+    4. Ministry Journey Timeline
+    5. Pastor's Message
+    6. Footer
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Pastor - Queens Village Church of the Nazarene</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+        
+        .pastor-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://static.photos/office/1200x630/23');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .nav-link:hover {
+            color: #f59e0b;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #f59e0b;
+            border: 3px solid white;
+        }
+    </style>
+</head>
+<body class="font-roboto bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                   
+                    <div class="flex items-center">
+                        <a href="index.html" class="font-playfair text-2xl font-bold text-gray-800 hover:text-yellow-600">QV Nazarene</a>
+                        <img src="https://huggingface.co/spaces/THarvey/divine-path-nazarene-hub/resolve/main/images/nazlogo.png" alt="Nazarene Logo" class="h-8 w-auto ml-4">
+                    </div>
+                </div>
+<div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">Home</a>
+                    <a href="about.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">About Us</a>
+                    <a href="pastor.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">Our Pastor</a>
+                    <a href="events.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">Events</a>
+<a href="contact.html" class="nav-link text-gray-800 hover:text-yellow-600 font-medium">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <i data-feather="menu" class="w-6 h-6 text-gray-800"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pastor-bg text-white py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="font-playfair text-5xl md:text-6xl font-bold mb-6">Meet Our Pastor</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Rev. Sase Dihal - Leading with faith, love, and compassion</p>
+</div>
+    </section>
+    <!-- Pastor Profile -->
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-2/5">
+                    <div class="relative group">
+                        <img src="http://static.photos/people/640x360/45" alt="Pastor Sase Dihal" 
+                             class="w-full rounded-xl shadow-xl transform group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-yellow-600 opacity-0 group-hover:opacity-10 rounded-xl transition duration-500"></div>
+                    </div>
+                    <div class="mt-6 flex flex-wrap gap-4 justify-center">
+                        <a href="mailto:churchqueensvillage@outlook.com" class="btn btn-primary">
+                            <i data-feather="mail" class="mr-2"></i> Email Pastor
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="lg:w-3/5">
+                    <h2 class="text-4xl font-bold mb-6">Pastor Sase Dihal</h2>
+                    <div class="prose max-w-none">
+                        <p class="text-lg mb-6">Pastor Sase has been faithfully serving at Queens Village Church of the Nazarene. With a pastor's heart and a teacher's mind, he brings dynamic biblical preaching and compassionate leadership to our congregation.</p>
+                        
+                        <div class="mb-6 p-6 bg-yellow-50 rounded-lg border-l-4 border-yellow-600">
+                            <h3 class="text-xl font-bold mb-2">Education & Credentials</h3>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Master of Divinity, Nazarene Theological Seminary</li>
+                                <li>Bachelor of Theology, Eastern Nazarene College</li>
+                                <li>Ordained Elder in the Church of the Nazarene</li>
+                            </ul>
+                        </div>
+
+                        <p class="mb-6">With over two decades of ministry experience across the district, Pastor Sase has a proven track record of church growth and community transformation. His research focuses on urban ministry and community engagement.</p>
+
+                        <p>Pastor Sase is married to Debbie, and together they have raised two wonderful children. When not engaged in ministry, he enjoys theological reading, cricket, and playing worship music.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Pastor's Message -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-gray-100 rounded-lg p-8 shadow-md">
+                <h2 class="font-playfair text-3xl font-bold text-gray-800 mb-6">A Message From Pastor David</h2>
+                <blockquote class="text-gray-600 italic mb-6 text-lg">
+                    "It's my joy and privilege to serve as your pastor here at Queens Village Church of the Nazarene. My prayer is that we would be a church that faithfully proclaims the Gospel, deeply loves one another, and actively serves our community."
+                </blockquote>
+                <p class="text-gray-600 mb-6">I believe God has called us to be a light in our neighborhood, showing Christ's love through both our words and actions. Whether you're exploring faith for the first time or looking for a church home, we welcome you with open arms.</p>
+                <p class="text-gray-600">Join us as we seek to grow in Christ together, support one another in life's journey, and make a difference in our world for God's kingdom.</p>
+                <div class="mt-8 flex items-center">
+                    <img src="http://static.photos/people/200x200/45" alt="Pastor David signature" class="w-32 h-auto">
+                    <div class="ml-4">
+                <p class="font-bold text-gray-800">Rev. Sase Dihal</p>
+<p class="text-gray-600">Senior Pastor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-playfair text-xl font-bold mb-4">QV Nazarene</h3>
+                    <p class="text-gray-400">186-06 Hillside Ave</p>
+                    <p class="text-gray-400">Jamaica, NY 11432</p>
+                    
+                    <div class="mt-4">
+                        <a href="/documents/annual-report.pdf" class="text-yellow-500 hover:underline text-sm">Annual Report {COMING SOON}</a>
+                    </div>
+                </div>
+<div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-yellow-500 transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-yellow-500 transition">About Us</a></li>
+                        <li><a href="pastor.html" class="text-gray-400 hover:text-yellow-500 transition">Our Pastor</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-yellow-500 transition">Events</a></li>
+                    </ul>
+                </div>
+               
+</div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Queens Village Church of the Nazarene. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+<script>
+        feather.replace();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
